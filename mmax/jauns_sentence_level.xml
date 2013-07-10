@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE markables SYSTEM "markables.dtd">
+<markables xmlns="www.eml.org/NameSpaces/sentence">
+<markable mmax_level="sentence" id="markable_1" span="word_1..word_13" />
+<markable mmax_level="sentence" id="markable_2" span="word_14..word_53" />
+<markable mmax_level="sentence" id="markable_3" span="word_54..word_75" />
+<markable mmax_level="sentence" id="markable_4" span="word_76..word_113" />
+<markable mmax_level="sentence" id="markable_5" span="word_114..word_127" />
+<markable mmax_level="sentence" id="markable_6" span="word_128..word_169" />
+<markable mmax_level="sentence" id="markable_7" span="word_170..word_190" />
+<markable mmax_level="sentence" id="markable_8" span="word_191..word_210" />
+<markable mmax_level="sentence" id="markable_9" span="word_211..word_227" />
+<markable mmax_level="sentence" id="markable_10" span="word_228..word_255" />
+<markable mmax_level="sentence" id="markable_11" span="word_256..word_285" />
+<markable mmax_level="sentence" id="markable_12" span="word_286..word_307" />
+<markable mmax_level="sentence" id="markable_13" span="word_308..word_327" />
+<markable mmax_level="sentence" id="markable_14" span="word_328..word_357" />
+<markable mmax_level="sentence" id="markable_15" span="word_358..word_392" />
+<markable mmax_level="sentence" id="markable_16" span="word_393..word_412" />
+<markable mmax_level="sentence" id="markable_17" span="word_413..word_440" />
+<markable mmax_level="sentence" id="markable_18" span="word_441..word_465" />
+<markable mmax_level="sentence" id="markable_19" span="word_466..word_489" />
+<markable mmax_level="sentence" id="markable_20" span="word_490..word_508" />
+<markable mmax_level="sentence" id="markable_21" span="word_509..word_522" />
+</markables>
