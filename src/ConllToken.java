@@ -16,10 +16,10 @@ public class ConllToken {
     boolean cat_start = false;
     boolean cat_end = false;
     
+    
 //    String word;
 //    String lemma;
 //    String tag;
-    
     public ConllToken(Conll _conll, int _id, int _sent_id, String[] _fields) {
     	conll = _conll;
     	id = _id;

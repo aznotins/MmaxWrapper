@@ -1,10 +1,8 @@
 import java.io.BufferedWriter;
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStreamWriter;
-import java.io.UnsupportedEncodingException;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -24,6 +22,7 @@ public class MmaxWrapper {
 	
 	static String mmaxPath = "";
 	static String project = "";
+	static String forNer = "";
 	
 	
 	static String MMAX_STRING = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n" +
@@ -140,6 +139,28 @@ public class MmaxWrapper {
     }
     
     
+    public void exportForNer(Conll conll, String fileName) throws IOException {
+    	BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(fileName),"UTF-8"));
+    	String eol = System.getProperty("line.separator");
+        StringBuilder s = new StringBuilder();
+        ConllToken ct;
+        for (int token_i = 0; token_i < conll.getSize(); token_i++) {
+        	ct = conll.getToken(token_i);
+            s.append(ct.fields.get(1)); s.append("\t");
+            s.append(ct.fields.get(3).charAt(0)); s.append("\t");
+            s.append(ct.fields.get(2)); s.append("\t");
+            s.append(ct.fields.get(4)); s.append("\t");
+            s.append(ct.fields.get(6)); s.append("\t");
+            s.append(ct.fields.get(5)); s.append("\t");
+            s.append(eol);
+            if (ct.isSentEnd()) s.append(eol);
+            writer.write(s.toString());	    	
+    	}
+    	writer.flush();
+    	writer.close();
+    }
+    
+    
     public void readWordLevel(Conll conll, String fileName) throws SAXException, IOException, ParserConfigurationException {
     	File mmax_file = new File(fileName);
         DocumentBuilder dBuilder = DocumentBuilderFactory.newInstance().newDocumentBuilder();
@@ -219,6 +240,7 @@ public class MmaxWrapper {
 			if (args[i].equalsIgnoreCase("-exportConll")) exportConll = Utils.attr(args[i+1], "-exportConll");
 			if (args[i].equalsIgnoreCase("-mmaxPath")) mmaxPath = Utils.attr(args[i+1], "-mmaxPath");
 			if (args[i].equalsIgnoreCase("-project")) project = Utils.attr(args[i+1], "-project");
+			if (args[i].equalsIgnoreCase("-ner")) forNer = Utils.attr("true", "-ner");
 			
 			if (args[i].equalsIgnoreCase("-h") || args[i].equalsIgnoreCase("--help") || args[i].equalsIgnoreCase("-?")) {
 				System.out.println("MMAX2 wrapper");
@@ -226,6 +248,7 @@ public class MmaxWrapper {
 				System.out.println("\n\t-exportConll : added extra annotation columns");
 				System.out.println("\n\t-mmaxPath : path to mmax project");
 				System.out.println("\n\t-project : project name");
+				System.out.println("\n\t-ner : flag wheter to use function exportForNer()");
 				System.out.flush();
 				System.exit(0);
 			}
@@ -245,7 +268,11 @@ public class MmaxWrapper {
 		        mw.addSenteceLevel(conll, sentence_level);
 	        }
 	        mw.addMarkableLevel(conll, coref_level);
-	        mw.exportTokens(conll, exportConll);
+	        if (forNer.length() > 0) {
+	        	mw.exportForNer(conll, exportConll);	        	
+	        } else {
+	        	mw.exportTokens(conll, exportConll);
+	        }
 		} else if (importConll.length() > 0) {
 	        String words = mmaxPath+project+"_words.xml";
 	        String coref_level = mmaxPath+project+"_coref_level.xml";

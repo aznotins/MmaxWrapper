@@ -25,7 +25,8 @@ class Conll {
     	BufferedReader conll_in = new BufferedReader(new InputStreamReader(new FileInputStream(fileName), "UTF8"));
         String s;
         int sent_id = -1;
-        int token_id = -1;
+        int token_id = -1;        
+        
         while ((s = conll_in.readLine()) != null)  {
             if (s.trim().length() > 0) {
                 String[] fields = s.split("\t");
@@ -44,6 +45,7 @@ class Conll {
                 if (position == 1) token.setSentStart();
                 document.add(token);
             }
+            
         }
         conll_in.close();
 	}
