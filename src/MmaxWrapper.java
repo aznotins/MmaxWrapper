@@ -146,13 +146,18 @@ public class MmaxWrapper {
         	StringBuilder s = new StringBuilder();
         	ConllToken ct = conll.getToken(token_i);
         	s.append(ct.fields.get(0)); s.append("\t");
-            s.append(ct.fields.get(1)); s.append("\t");
-            s.append(ct.fields.get(2)); s.append("\t");
+            s.append(ct.fields.get(1).replace(" ",  "_")); s.append("\t");
+            s.append(ct.fields.get(2).replace(" ",  "_")); s.append("\t");
             s.append(ct.fields.get(3)); s.append("\t");
+            s.append(ct.fields.get(4)); s.append("\t");
             s.append(ct.fields.get(5)); s.append("\t");
-            s.append(ct.fields.get(6)); s.append("\t");
-            s.append(ct.fields.get(7)); s.append("\t");
-            s.append(ct.fields.get(8)); s.append("\t");
+            if (ct.fields.get(6).equals("other")) {
+            	s.append("O\t_\t_\t");
+            } else {
+            	s.append(ct.fields.get(6)); s.append("\t");
+                s.append(ct.fields.get(7)); s.append("\t");
+                s.append(ct.fields.get(8)); s.append("\t");
+            }
             s.append(ct.fields.get(3).charAt(0)); s.append("\t");
             s.append(eol);
             if (ct.isSentEnd()) s.append(eol);
