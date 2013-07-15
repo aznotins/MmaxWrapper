@@ -141,20 +141,22 @@ public class MmaxWrapper {
     
     public void exportForNer(Conll conll, String fileName) throws IOException {
     	BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(fileName),"UTF-8"));
-    	String eol = System.getProperty("line.separator");
-        StringBuilder s = new StringBuilder();
-        ConllToken ct;
+    	String eol = System.getProperty("line.separator");        
         for (int token_i = 0; token_i < conll.getSize(); token_i++) {
-        	ct = conll.getToken(token_i);
+        	StringBuilder s = new StringBuilder();
+        	ConllToken ct = conll.getToken(token_i);
+        	s.append(ct.fields.get(0)); s.append("\t");
             s.append(ct.fields.get(1)); s.append("\t");
-            s.append(ct.fields.get(3).charAt(0)); s.append("\t");
             s.append(ct.fields.get(2)); s.append("\t");
-            s.append(ct.fields.get(4)); s.append("\t");
-            s.append(ct.fields.get(6)); s.append("\t");
+            s.append(ct.fields.get(3)); s.append("\t");
             s.append(ct.fields.get(5)); s.append("\t");
+            s.append(ct.fields.get(6)); s.append("\t");
+            s.append(ct.fields.get(7)); s.append("\t");
+            s.append(ct.fields.get(8)); s.append("\t");
+            s.append(ct.fields.get(3).charAt(0)); s.append("\t");
             s.append(eol);
             if (ct.isSentEnd()) s.append(eol);
-            writer.write(s.toString());	    	
+            writer.write(s.toString());
     	}
     	writer.flush();
     	writer.close();
