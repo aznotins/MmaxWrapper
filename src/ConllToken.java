@@ -4,10 +4,18 @@ import java.util.List;
 
 
 public class ConllToken {
-	Conll conll;
-	List<String> fields;    
+	Conll conll;  
     int sent_id;
     int id;
+    
+    List<String> fields;
+    
+    int position;
+    String word;
+    String lemma;
+    String tag;
+    String fullTag;
+    String morphoFeatures;
     
     boolean sent_start;
     
@@ -17,14 +25,41 @@ public class ConllToken {
     boolean cat_end = false;
     
     
-//    String word;
-//    String lemma;
-//    String tag;
+    /**
+     * 
+     * @param _conll
+     * @param _id
+     * @param _sent_id
+     * @param _fields
+     */
     public ConllToken(Conll _conll, int _id, int _sent_id, String[] _fields) {
     	conll = _conll;
     	id = _id;
     	sent_id = _sent_id;
+    	position = Integer.parseInt(_fields[0]);
+    	word = _fields[1];
+    	lemma = _fields[2];
+    	tag = _fields[3];
+    	fullTag = _fields[4];
+    	morphoFeatures = _fields[5];
     	fields = new ArrayList(Arrays.asList(_fields));
+    }
+    
+    /**
+     * Simple format
+     * @param _conll
+     * @param _id
+     * @param _sent_id
+     * @param word
+     * @param category
+     */
+    public ConllToken(Conll _conll, int _id, int _sent_id, String _word, String _category) {
+    	conll = _conll;
+    	id = _id;
+    	sent_id = _sent_id;
+    	fields = new ArrayList();
+    	word = _word;
+    	category = _category;
     }
     
     public ConllToken(Conll _conll, int _id) {

@@ -1,7 +1,10 @@
+import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 
 import javax.xml.parsers.DocumentBuilder;
@@ -23,6 +26,7 @@ public class MmaxWrapper {
 	static String mmaxPath = "";
 	static String project = "";
 	static String forNer = "";
+	static String importWebNe = "";
 	
 	
 	static String MMAX_STRING = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n" +
@@ -52,12 +56,12 @@ public class MmaxWrapper {
         writer.close();
     }
     
-    public void importWords(Conll conll, String fileName) throws IOException {
+    public void exportWords(Conll conll, String fileName) throws IOException {
      	BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(fileName),"UTF-8"));
         Utils.toWriter(writer, WORDS_HEADER_STRING);
         for (int token_i = 0; token_i < conll.getSize(); token_i++) {
         	ConllToken token = conll.getToken(token_i);
-        	String word = token.getField(1);
+        	String word = token.word;
         	Utils.toWriter(writer, "<word id=\"word_"+(token_i+1)+"\">"+StringEscapeUtils.escapeXml(word) + "</word>\n");
         }
         Utils.toWriter(writer, "</words>");
@@ -65,26 +69,28 @@ public class MmaxWrapper {
         writer.close();
     }
     
-    public void importMentions(Conll conll, String fileName) throws IOException {
+    public void exportMentions(Conll conll, String fileName) throws IOException {
      	BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(fileName),"UTF-8"));
         Utils.toWriter(writer, MENTION_HEADER_STRING);
         
-//        for (Mention m : d.mentions) {
-//            String span = "";
-//            if (m.start == m.end) span = "word_"+(m.start+1);
-//            else span = "word_"+(m.start+1)+".."+"word_"+(m.end+1);
-//            String coref_class = "";
-//            if (d.corefClusters.get(m.corefClusterID).corefMentions.size() > 1) coref_class = "set_"+m.corefClusterID;
-//            else coref_class = "empty";
-//            String category = "other";
-//            if (m.category != null) {
-//                if (m.category.equals("ORG")) category = "organization";
-//                else if (m.category.equals("LOCATION")) category = "location";
-//                else if (m.category.equals("PERSON")) category = "person";
-//            }
-//            
-//            Utils.toWriter(writer, "<markable id=\"markable_"+(m.id+1)+"\" span=\""+span+"\" coref_class=\""+coref_class+"\" category=\""+category+"\" mmax_level=\"coref\"  rule=\"none\"  type=\"none\"/>\n");
-//        }
+        int intervalStart = 0;
+        int intervalEnd = 0;
+        int id = 0;
+        for (int i = 0; i < conll.getSize(); i++) {
+        	ConllToken t = conll.getToken(i);
+        	if (t.cat_start) intervalStart = t.id;
+        	if (t.cat_end) {
+        		intervalEnd = t.id;
+        		id++;
+        		String span = "";
+    			if (intervalStart == intervalEnd) span = "word_"+(intervalStart+1);
+    			else span = "word_"+(intervalStart+1)+".."+"word_"+(intervalEnd+1);
+    			String coref_class = "empty";
+    			String category = t.category;
+    			//System.out.println(category + "\t" + conll.getMarkable(intervalStart, intervalEnd));
+    			Utils.toWriter(writer, "<markable id=\"markable_"+(id)+"\" span=\""+span+"\" coref_class=\""+coref_class+"\" category=\""+category+"\" mmax_level=\"coref\"  rule=\"none\"  type=\"none\"/>\n");
+        	}
+        }
         Utils.toWriter(writer, "</markables>");
         writer.flush();
         writer.close();
@@ -98,7 +104,7 @@ public class MmaxWrapper {
         writer.close();
     }
     
-    public void importSentences(Conll conll, String fileName) throws IOException {
+    public void exportSentences(Conll conll, String fileName) throws IOException {
      	BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(fileName),"UTF-8"));
         Utils.toWriter(writer, SENTENCE_HEADER_STRING);
         
@@ -145,20 +151,22 @@ public class MmaxWrapper {
         for (int token_i = 0; token_i < conll.getSize(); token_i++) {
         	StringBuilder s = new StringBuilder();
         	ConllToken ct = conll.getToken(token_i);
-        	s.append(ct.fields.get(0)); s.append("\t");
-            s.append(ct.fields.get(1).replace(" ",  "_")); s.append("\t");
-            s.append(ct.fields.get(2).replace(" ",  "_")); s.append("\t");
-            s.append(ct.fields.get(3)); s.append("\t");
-            s.append(ct.fields.get(4)); s.append("\t");
-            s.append(ct.fields.get(5)); s.append("\t");
-            if (ct.fields.get(6).equals("other")) {
+        	s.append(ct.position); s.append("\t");
+            s.append(ct.word.replace(" ",  "_")); s.append("\t");
+            s.append(ct.lemma.replace(" ",  "_")); s.append("\t");
+            s.append(ct.tag); s.append("\t");
+            s.append(ct.fullTag); s.append("\t");
+            s.append(ct.morphoFeatures); s.append("\t");
+            if (ct.category.equals("other")) {
             	s.append("O\t_\t_\t");
             } else {
-            	s.append(ct.fields.get(6)); s.append("\t");
-                s.append(ct.fields.get(7)); s.append("\t");
-                s.append(ct.fields.get(8)); s.append("\t");
+            	s.append(ct.category); s.append("\t");
+            	String ct_start = ct.cat_start?"START":"_";
+                s.append(ct_start); s.append("\t");
+                String ct_end = ct.cat_end?"END":"_";
+                s.append(ct_end); s.append("\t");
             }
-            s.append(ct.fields.get(3).charAt(0)); s.append("\t");
+            s.append(ct.tag.charAt(0)); s.append("\t");
             s.append(eol);
             if (ct.isSentEnd()) s.append(eol);
             writer.write(s.toString());
@@ -181,8 +189,7 @@ public class MmaxWrapper {
             String ids = markable.getAttributes().getNamedItem("id").getNodeValue();
             int id = Integer.parseInt(ids.substring(5))-1;
             ConllToken ct = new ConllToken(conll, id);
-            ct.addField(word);
-            conll.addToken(ct);
+            ct.word = word;
         }
     }
     
@@ -227,16 +234,6 @@ public class MmaxWrapper {
             
             conll.setMention(start, end, category);
         }
-        
-        ConllToken ct;
-        for (int i = 0; i < conll.getSize(); i++) {
-        	ct = conll.getToken(i);
-        	ct.addField(ct.category);
-        	if (ct.cat_start) ct.addField("START");
-        	else ct.addField("_");
-        	if (ct.cat_end) ct.addField("END");
-        	else ct.addField("_");
-        }
     }
     
 	
@@ -248,10 +245,12 @@ public class MmaxWrapper {
 			if (args[i].equalsIgnoreCase("-mmaxPath")) mmaxPath = Utils.attr(args[i+1], "-mmaxPath");
 			if (args[i].equalsIgnoreCase("-project")) project = Utils.attr(args[i+1], "-project");
 			if (args[i].equalsIgnoreCase("-ner")) forNer = Utils.attr("true", "-ner");
+			if (args[i].equalsIgnoreCase("-importWebNE")) importWebNe = Utils.attr(args[i+1], "-importWebNE");
 			
 			if (args[i].equalsIgnoreCase("-h") || args[i].equalsIgnoreCase("--help") || args[i].equalsIgnoreCase("-?")) {
 				System.out.println("MMAX2 wrapper");
-				System.out.println("\n\t-cnll : base conll data");
+				System.out.println("\n\t-conll : base conll data");
+				System.out.println("\n\t-importWebNE : annotated data from web annotation tool");
 				System.out.println("\n\t-exportConll : added extra annotation columns");
 				System.out.println("\n\t-mmaxPath : path to mmax project");
 				System.out.println("\n\t-project : project name");
@@ -280,18 +279,20 @@ public class MmaxWrapper {
 	        } else {
 	        	mw.exportTokens(conll, exportConll);
 	        }
-		} else if (importConll.length() > 0) {
+		} else if (importConll.length() > 0 || importWebNe.length() > 0) {
 	        String words = mmaxPath+project+"_words.xml";
 	        String coref_level = mmaxPath+project+"_coref_level.xml";
 	        String sentence_level = mmaxPath+project+"_sentence_level.xml";
 	        String project_file = mmaxPath+project+".mmax";
 	        
 	        Conll conll = new Conll();
-	        conll.readConll(importConll);
+	        if (importConll.length() > 0) conll.readConll(importConll);
+	        else if (importWebNe.length() > 0) conll.readNeAnnotation(importWebNe);
 	        mw.createProjectFile(project_file);
-	        mw.importWords(conll, words);
-	        mw.createMarkableLevel(coref_level);
-	        mw.importSentences(conll, sentence_level);
-		}      
+	        mw.exportWords(conll, words);
+	        //mw.createMarkableLevel(coref_level);
+	        mw.exportMentions(conll, coref_level);
+	        mw.exportSentences(conll, sentence_level);
+		}
     }
 }
