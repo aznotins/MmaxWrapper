@@ -27,6 +27,7 @@ public class MmaxWrapper {
 	static String project = "";
 	static String forNer = "";
 	static String importWebNe = "";
+	static int conllNeColumn = -1;
 	
 	
 	static String MMAX_STRING = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n" +
@@ -166,7 +167,7 @@ public class MmaxWrapper {
                 String ct_end = ct.cat_end?"END":"_";
                 s.append(ct_end); s.append("\t");
             }
-            s.append(ct.tag.charAt(0)); s.append("\t");
+            s.append(ct.fullTag.charAt(0)); s.append("\t");
             s.append(eol);
             if (ct.isSentEnd()) s.append(eol);
             writer.write(s.toString());
@@ -246,6 +247,7 @@ public class MmaxWrapper {
 			if (args[i].equalsIgnoreCase("-project")) project = Utils.attr(args[i+1], "-project");
 			if (args[i].equalsIgnoreCase("-ner")) forNer = Utils.attr("true", "-ner");
 			if (args[i].equalsIgnoreCase("-importWebNE")) importWebNe = Utils.attr(args[i+1], "-importWebNE");
+			if (args[i].equalsIgnoreCase("-conllNeColumn")) conllNeColumn = Integer.parseInt(Utils.attr(args[i+1], "-conllNeColumn"));
 			
 			if (args[i].equalsIgnoreCase("-h") || args[i].equalsIgnoreCase("--help") || args[i].equalsIgnoreCase("-?")) {
 				System.out.println("MMAX2 wrapper");
@@ -255,6 +257,7 @@ public class MmaxWrapper {
 				System.out.println("\n\t-mmaxPath : path to mmax project");
 				System.out.println("\n\t-project : project name");
 				System.out.println("\n\t-ner : flag wheter to use function exportForNer()");
+				System.out.println("\n\t-conllNeColumn : set NE annotation from conll column with specified index (numbering starts with 0)");
 				System.out.flush();
 				System.exit(0);
 			}
@@ -286,7 +289,13 @@ public class MmaxWrapper {
 	        String project_file = mmaxPath+project+".mmax";
 	        
 	        Conll conll = new Conll();
-	        if (importConll.length() > 0) conll.readConll(importConll);
+	        if (importConll.length() > 0) {
+	        	conll.readConll(importConll);
+	        	if (conllNeColumn > -1) {
+	        		conll.setNeAnnotationFromConll(conllNeColumn);
+	        		conll.setMarkableBorders();
+	        	}
+	        }
 	        else if (importWebNe.length() > 0) conll.readNeAnnotation(importWebNe);
 	        mw.createProjectFile(project_file);
 	        mw.exportWords(conll, words);

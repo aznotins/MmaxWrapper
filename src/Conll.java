@@ -3,6 +3,7 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Locale.Category;
 
@@ -51,6 +52,13 @@ class Conll {
         conll_in.close();
 	}
     
+    public void setNeAnnotationFromConll(int column) {
+    	for (int i = 0; i < getSize(); i++) {
+    		ConllToken t = getToken(i);
+    		t.category = t.fields.get(column);
+    	}
+    }
+    
     public void readNeAnnotation(String fileName) throws NumberFormatException, IOException {
     	BufferedReader conll_in = new BufferedReader(new InputStreamReader(new FileInputStream(fileName), "UTF8"));
         String s;
@@ -73,9 +81,11 @@ class Conll {
                 else if (category.equals("ORGANIZACIJA")) category = "organization";
                 else if (category.equals("CITI")) category = "other";
                 else if (category.equals("LOKACIJA")) category = "location";
-                else if (category.equals("PRODUKTI")) category = "product";
                 else if (category.equals("NOTIKUMS")) category = "event";
                 else if (category.equals("O"));
+                else if (Arrays.asList("time", "product", "person", "organization", "other", "location", "sum", "media", "profession", "event").contains(category)) {
+                	// go on
+                }
                 else System.err.println("Unnsupported category: " + category);
                 
                 
