@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE markables SYSTEM "markables.dtd">
+<markables xmlns="www.eml.org/NameSpaces/coref">
+<markable id="markable_1" span="word_17..word_20" coref_class="empty" category="time" mmax_level="coref"  rule="none"  type="none"/>
+<markable id="markable_2" span="word_24..word_25" coref_class="empty" category="person" mmax_level="coref"  rule="none"  type="none"/>
+<markable id="markable_3" span="word_27..word_28" coref_class="empty" category="location" mmax_level="coref"  rule="none"  type="none"/>
+<markable id="markable_4" span="word_31" coref_class="empty" category="profession" mmax_level="coref"  rule="none"  type="none"/>
+<markable id="markable_5" span="word_33..word_36" coref_class="empty" category="organization" mmax_level="coref"  rule="none"  type="none"/>
+<markable id="markable_6" span="word_40..word_41" coref_class="empty" category="organization" mmax_level="coref"  rule="none"  type="none"/>
+<markable id="markable_7" span="word_49..word_50" coref_class="empty" category="location" mmax_level="coref"  rule="none"  type="none"/>
+<markable id="markable_8" span="word_52..word_55" coref_class="empty" category="time" mmax_level="coref"  rule="none"  type="none"/>
+<markable id="markable_9" span="word_62" coref_class="empty" category="location" mmax_level="coref"  rule="none"  type="none"/>
+<markable id="markable_10" span="word_66..word_67" coref_class="empty" category="sum" mmax_level="coref"  rule="none"  type="none"/>
+<markable id="markable_11" span="word_83" coref_class="empty" category="location" mmax_level="coref"  rule="none"  type="none"/>
+<markable id="markable_12" span="word_89" coref_class="empty" category="location" mmax_level="coref"  rule="none"  type="none"/>
+<markable id="markable_13" span="word_98" coref_class="empty" category="profession" mmax_level="coref"  rule="none"  type="none"/>
+<markable id="markable_14" span="word_110" coref_class="empty" category="location" mmax_level="coref"  rule="none"  type="none"/>
+<markable id="markable_15" span="word_131..word_134" coref_class="empty" category="organization" mmax_level="coref"  rule="none"  type="none"/>
+<markable id="markable_16" span="word_135..word_136" coref_class="empty" category="profession" mmax_level="coref"  rule="none"  type="none"/>
+<markable id="markable_17" span="word_137..word_138" coref_class="empty" category="person" mmax_level="coref"  rule="none"  type="none"/>
+<markable id="markable_18" span="word_160" coref_class="empty" category="location" mmax_level="coref"  rule="none"  type="none"/>
+<markable id="markable_19" span="word_192..word_195" coref_class="empty" category="profession" mmax_level="coref"  rule="none"  type="none"/>
+<markable id="markable_20" span="word_196..word_197" coref_class="empty" category="person" mmax_level="coref"  rule="none"  type="none"/>
+<markable id="markable_21" span="word_217" coref_class="empty" category="location" mmax_level="coref"  rule="none"  type="none"/>
+<markable id="markable_22" span="word_218" coref_class="empty" category="profession" mmax_level="coref"  rule="none"  type="none"/>
+<markable id="markable_23" span="word_234" coref_class="empty" category="location" mmax_level="coref"  rule="none"  type="none"/>
+<markable id="markable_24" span="word_235" coref_class="empty" category="profession" mmax_level="coref"  rule="none"  type="none"/>
+<markable id="markable_25" span="word_251" coref_class="empty" category="location" mmax_level="coref"  rule="none"  type="none"/>
+<markable id="markable_26" span="word_256..word_257" coref_class="empty" category="time" mmax_level="coref"  rule="none"  type="none"/>
+<markable id="markable_27" span="word_260" coref_class="empty" category="location" mmax_level="coref"  rule="none"  type="none"/>
+<markable id="markable_28" span="word_273" coref_class="empty" category="profession" mmax_level="coref"  rule="none"  type="none"/>
+<markable id="markable_29" span="word_312" coref_class="empty" category="time" mmax_level="coref"  rule="none"  type="none"/>
+<markable id="markable_30" span="word_314..word_315" coref_class="empty" category="time" mmax_level="coref"  rule="none"  type="none"/>
+<markable id="markable_31" span="word_337..word_338" coref_class="empty" category="time" mmax_level="coref"  rule="none"  type="none"/>
+<markable id="markable_32" span="word_341" coref_class="empty" category="profession" mmax_level="coref"  rule="none"  type="none"/>
+<markable id="markable_33" span="word_350..word_351" coref_class="empty" category="sum" mmax_level="coref"  rule="none"  type="none"/>
+<markable id="markable_34" span="word_360" coref_class="empty" category="location" mmax_level="coref"  rule="none"  type="none"/>
+<markable id="markable_35" span="word_376" coref_class="empty" category="organization" mmax_level="coref"  rule="none"  type="none"/>
+<markable id="markable_36" span="word_380..word_381" coref_class="empty" category="organization" mmax_level="coref"  rule="none"  type="none"/>
+<markable id="markable_37" span="word_385" coref_class="empty" category="organization" mmax_level="coref"  rule="none"  type="none"/>
+<markable id="markable_38" span="word_404" coref_class="empty" category="profession" mmax_level="coref"  rule="none"  type="none"/>
+<markable id="markable_39" span="word_405..word_406" coref_class="empty" category="person" mmax_level="coref"  rule="none"  type="none"/>
+</markables>

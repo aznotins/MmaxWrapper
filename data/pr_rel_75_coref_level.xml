@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE markables SYSTEM "markables.dtd">
+<markables xmlns="www.eml.org/NameSpaces/coref">
+<markable id="markable_1" span="word_18..word_21" coref_class="empty" category="time" mmax_level="coref"  rule="none"  type="none"/>
+<markable id="markable_2" span="word_25..word_26" coref_class="empty" category="person" mmax_level="coref"  rule="none"  type="none"/>
+<markable id="markable_3" span="word_33" coref_class="empty" category="profession" mmax_level="coref"  rule="none"  type="none"/>
+<markable id="markable_4" span="word_38..word_41" coref_class="empty" category="time" mmax_level="coref"  rule="none"  type="none"/>
+<markable id="markable_5" span="word_46..word_49" coref_class="empty" category="time" mmax_level="coref"  rule="none"  type="none"/>
+<markable id="markable_6" span="word_51..word_54" coref_class="empty" category="organization" mmax_level="coref"  rule="none"  type="none"/>
+<markable id="markable_7" span="word_58" coref_class="empty" category="location" mmax_level="coref"  rule="none"  type="none"/>
+<markable id="markable_8" span="word_81" coref_class="empty" category="organization" mmax_level="coref"  rule="none"  type="none"/>
+<markable id="markable_9" span="word_84" coref_class="empty" category="organization" mmax_level="coref"  rule="none"  type="none"/>
+<markable id="markable_10" span="word_133..word_136" coref_class="empty" category="time" mmax_level="coref"  rule="none"  type="none"/>
+<markable id="markable_11" span="word_143" coref_class="empty" category="location" mmax_level="coref"  rule="none"  type="none"/>
+<markable id="markable_12" span="word_145..word_147" coref_class="empty" category="location" mmax_level="coref"  rule="none"  type="none"/>
+<markable id="markable_13" span="word_191..word_194" coref_class="empty" category="time" mmax_level="coref"  rule="none"  type="none"/>
+<markable id="markable_14" span="word_225..word_226" coref_class="empty" category="person" mmax_level="coref"  rule="none"  type="none"/>
+<markable id="markable_15" span="word_229" coref_class="empty" category="profession" mmax_level="coref"  rule="none"  type="none"/>
+</markables>

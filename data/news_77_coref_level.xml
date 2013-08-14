@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE markables SYSTEM "markables.dtd">
+<markables xmlns="www.eml.org/NameSpaces/coref">
+<markable id="markable_1" span="word_1" coref_class="empty" category="location" mmax_level="coref"  rule="none"  type="none"/>
+<markable id="markable_2" span="word_3" coref_class="empty" category="time" mmax_level="coref"  rule="none"  type="none"/>
+<markable id="markable_3" span="word_11..word_12" coref_class="empty" category="time" mmax_level="coref"  rule="none"  type="none"/>
+<markable id="markable_4" span="word_14" coref_class="empty" category="organization" mmax_level="coref"  rule="none"  type="none"/>
+<markable id="markable_5" span="word_19" coref_class="empty" category="location" mmax_level="coref"  rule="none"  type="none"/>
+<markable id="markable_6" span="word_23" coref_class="empty" category="time" mmax_level="coref"  rule="none"  type="none"/>
+<markable id="markable_7" span="word_25..word_27" coref_class="empty" category="sum" mmax_level="coref"  rule="none"  type="none"/>
+<markable id="markable_8" span="word_29..word_31" coref_class="empty" category="sum" mmax_level="coref"  rule="none"  type="none"/>
+<markable id="markable_9" span="word_37..word_39" coref_class="empty" category="sum" mmax_level="coref"  rule="none"  type="none"/>
+<markable id="markable_10" span="word_41..word_43" coref_class="empty" category="sum" mmax_level="coref"  rule="none"  type="none"/>
+<markable id="markable_11" span="word_49" coref_class="empty" category="time" mmax_level="coref"  rule="none"  type="none"/>
+<markable id="markable_12" span="word_54..word_55" coref_class="empty" category="organization" mmax_level="coref"  rule="none"  type="none"/>
+<markable id="markable_13" span="word_71" coref_class="empty" category="location" mmax_level="coref"  rule="none"  type="none"/>
+<markable id="markable_14" span="word_78..word_79" coref_class="empty" category="sum" mmax_level="coref"  rule="none"  type="none"/>
+<markable id="markable_15" span="word_82..word_84" coref_class="empty" category="sum" mmax_level="coref"  rule="none"  type="none"/>
+<markable id="markable_16" span="word_92" coref_class="empty" category="time" mmax_level="coref"  rule="none"  type="none"/>
+<markable id="markable_17" span="word_94" coref_class="empty" category="location" mmax_level="coref"  rule="none"  type="none"/>
+</markables>
