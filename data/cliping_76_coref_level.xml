@@ -1,75 +1,91 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE markables SYSTEM "markables.dtd">
 <markables xmlns="www.eml.org/NameSpaces/coref">
-<markable id="markable_1" span="word_7" coref_class="empty" category="location" mmax_level="coref"  rule="none"  type="none"/>
-<markable id="markable_2" span="word_11" coref_class="empty" category="location" mmax_level="coref"  rule="none"  type="none"/>
-<markable id="markable_3" span="word_15..word_16" coref_class="empty" category="organization" mmax_level="coref"  rule="none"  type="none"/>
-<markable id="markable_4" span="word_18..word_20" coref_class="empty" category="organization" mmax_level="coref"  rule="none"  type="none"/>
-<markable id="markable_5" span="word_22" coref_class="empty" category="location" mmax_level="coref"  rule="none"  type="none"/>
-<markable id="markable_6" span="word_29" coref_class="empty" category="organization" mmax_level="coref"  rule="none"  type="none"/>
-<markable id="markable_7" span="word_37" coref_class="empty" category="location" mmax_level="coref"  rule="none"  type="none"/>
-<markable id="markable_8" span="word_40" coref_class="empty" category="location" mmax_level="coref"  rule="none"  type="none"/>
-<markable id="markable_9" span="word_43" coref_class="empty" category="organization" mmax_level="coref"  rule="none"  type="none"/>
-<markable id="markable_10" span="word_53" coref_class="empty" category="organization" mmax_level="coref"  rule="none"  type="none"/>
-<markable id="markable_11" span="word_81..word_82" coref_class="empty" category="profession" mmax_level="coref"  rule="none"  type="none"/>
-<markable id="markable_12" span="word_83..word_84" coref_class="empty" category="person" mmax_level="coref"  rule="none"  type="none"/>
-<markable id="markable_13" span="word_90..word_91" coref_class="empty" category="organization" mmax_level="coref"  rule="none"  type="none"/>
-<markable id="markable_14" span="word_95" coref_class="empty" category="organization" mmax_level="coref"  rule="none"  type="none"/>
-<markable id="markable_15" span="word_99..word_100" coref_class="empty" category="person" mmax_level="coref"  rule="none"  type="none"/>
-<markable id="markable_16" span="word_150" coref_class="empty" category="organization" mmax_level="coref"  rule="none"  type="none"/>
-<markable id="markable_17" span="word_167" coref_class="empty" category="location" mmax_level="coref"  rule="none"  type="none"/>
-<markable id="markable_18" span="word_182..word_184" coref_class="empty" category="location" mmax_level="coref"  rule="none"  type="none"/>
-<markable id="markable_19" span="word_190..word_191" coref_class="empty" category="organization" mmax_level="coref"  rule="none"  type="none"/>
-<markable id="markable_20" span="word_207" coref_class="empty" category="location" mmax_level="coref"  rule="none"  type="none"/>
-<markable id="markable_21" span="word_222" coref_class="empty" category="person" mmax_level="coref"  rule="none"  type="none"/>
-<markable id="markable_22" span="word_227" coref_class="empty" category="organization" mmax_level="coref"  rule="none"  type="none"/>
-<markable id="markable_23" span="word_229" coref_class="empty" category="organization" mmax_level="coref"  rule="none"  type="none"/>
-<markable id="markable_24" span="word_233..word_234" coref_class="empty" category="organization" mmax_level="coref"  rule="none"  type="none"/>
-<markable id="markable_25" span="word_251..word_252" coref_class="empty" category="person" mmax_level="coref"  rule="none"  type="none"/>
-<markable id="markable_26" span="word_255" coref_class="empty" category="person" mmax_level="coref"  rule="none"  type="none"/>
-<markable id="markable_27" span="word_258" coref_class="empty" category="person" mmax_level="coref"  rule="none"  type="none"/>
-<markable id="markable_28" span="word_261" coref_class="empty" category="person" mmax_level="coref"  rule="none"  type="none"/>
-<markable id="markable_29" span="word_267" coref_class="empty" category="person" mmax_level="coref"  rule="none"  type="none"/>
-<markable id="markable_30" span="word_269" coref_class="empty" category="person" mmax_level="coref"  rule="none"  type="none"/>
-<markable id="markable_31" span="word_273" coref_class="empty" category="person" mmax_level="coref"  rule="none"  type="none"/>
-<markable id="markable_32" span="word_276" coref_class="empty" category="person" mmax_level="coref"  rule="none"  type="none"/>
-<markable id="markable_33" span="word_278" coref_class="empty" category="person" mmax_level="coref"  rule="none"  type="none"/>
-<markable id="markable_34" span="word_284" coref_class="empty" category="person" mmax_level="coref"  rule="none"  type="none"/>
-<markable id="markable_35" span="word_288" coref_class="empty" category="person" mmax_level="coref"  rule="none"  type="none"/>
-<markable id="markable_36" span="word_290" coref_class="empty" category="person" mmax_level="coref"  rule="none"  type="none"/>
-<markable id="markable_37" span="word_297" coref_class="empty" category="organization" mmax_level="coref"  rule="none"  type="none"/>
-<markable id="markable_38" span="word_321..word_322" coref_class="empty" category="organization" mmax_level="coref"  rule="none"  type="none"/>
-<markable id="markable_39" span="word_330..word_331" coref_class="empty" category="organization" mmax_level="coref"  rule="none"  type="none"/>
-<markable id="markable_40" span="word_339" coref_class="empty" category="organization" mmax_level="coref"  rule="none"  type="none"/>
-<markable id="markable_41" span="word_347" coref_class="empty" category="organization" mmax_level="coref"  rule="none"  type="none"/>
-<markable id="markable_42" span="word_355" coref_class="empty" category="organization" mmax_level="coref"  rule="none"  type="none"/>
-<markable id="markable_43" span="word_363" coref_class="empty" category="organization" mmax_level="coref"  rule="none"  type="none"/>
-<markable id="markable_44" span="word_371" coref_class="empty" category="organization" mmax_level="coref"  rule="none"  type="none"/>
-<markable id="markable_45" span="word_383" coref_class="empty" category="organization" mmax_level="coref"  rule="none"  type="none"/>
-<markable id="markable_46" span="word_387" coref_class="empty" category="organization" mmax_level="coref"  rule="none"  type="none"/>
-<markable id="markable_47" span="word_406" coref_class="empty" category="person" mmax_level="coref"  rule="none"  type="none"/>
-<markable id="markable_48" span="word_409" coref_class="empty" category="person" mmax_level="coref"  rule="none"  type="none"/>
-<markable id="markable_49" span="word_415" coref_class="empty" category="person" mmax_level="coref"  rule="none"  type="none"/>
-<markable id="markable_50" span="word_421" coref_class="empty" category="person" mmax_level="coref"  rule="none"  type="none"/>
-<markable id="markable_51" span="word_425..word_426" coref_class="empty" category="organization" mmax_level="coref"  rule="none"  type="none"/>
-<markable id="markable_52" span="word_430" coref_class="empty" category="organization" mmax_level="coref"  rule="none"  type="none"/>
-<markable id="markable_53" span="word_449" coref_class="empty" category="person" mmax_level="coref"  rule="none"  type="none"/>
-<markable id="markable_54" span="word_455" coref_class="empty" category="person" mmax_level="coref"  rule="none"  type="none"/>
-<markable id="markable_55" span="word_457" coref_class="empty" category="person" mmax_level="coref"  rule="none"  type="none"/>
-<markable id="markable_56" span="word_467" coref_class="empty" category="person" mmax_level="coref"  rule="none"  type="none"/>
-<markable id="markable_57" span="word_470" coref_class="empty" category="person" mmax_level="coref"  rule="none"  type="none"/>
-<markable id="markable_58" span="word_476..word_477" coref_class="empty" category="organization" mmax_level="coref"  rule="none"  type="none"/>
-<markable id="markable_59" span="word_486" coref_class="empty" category="organization" mmax_level="coref"  rule="none"  type="none"/>
-<markable id="markable_60" span="word_494" coref_class="empty" category="organization" mmax_level="coref"  rule="none"  type="none"/>
-<markable id="markable_61" span="word_502" coref_class="empty" category="organization" mmax_level="coref"  rule="none"  type="none"/>
-<markable id="markable_62" span="word_511" coref_class="empty" category="organization" mmax_level="coref"  rule="none"  type="none"/>
-<markable id="markable_63" span="word_516" coref_class="empty" category="organization" mmax_level="coref"  rule="none"  type="none"/>
-<markable id="markable_64" span="word_533" coref_class="empty" category="person" mmax_level="coref"  rule="none"  type="none"/>
-<markable id="markable_65" span="word_536" coref_class="empty" category="person" mmax_level="coref"  rule="none"  type="none"/>
-<markable id="markable_66" span="word_542" coref_class="empty" category="person" mmax_level="coref"  rule="none"  type="none"/>
-<markable id="markable_67" span="word_545" coref_class="empty" category="person" mmax_level="coref"  rule="none"  type="none"/>
-<markable id="markable_68" span="word_548" coref_class="empty" category="person" mmax_level="coref"  rule="none"  type="none"/>
-<markable id="markable_69" span="word_569" coref_class="empty" category="organization" mmax_level="coref"  rule="none"  type="none"/>
-<markable id="markable_70" span="word_577" coref_class="empty" category="organization" mmax_level="coref"  rule="none"  type="none"/>
-<markable id="markable_71" span="word_585" coref_class="empty" category="organization" mmax_level="coref"  rule="none"  type="none"/>
+<markable id="markable_102" span="word_533" coref_class="empty"  category="person"  mmax_level="coref"  rule="none"  type="none" />
+<markable id="markable_101" span="word_516" coref_class="empty"  category="organization"  mmax_level="coref"  rule="none"  type="none" />
+<markable id="markable_100" span="word_511" coref_class="empty"  category="organization"  mmax_level="coref"  rule="none"  type="none" />
+<markable id="markable_106" span="word_545" coref_class="empty"  category="person"  mmax_level="coref"  rule="none"  type="none" />
+<markable id="markable_66" span="word_282" coref_class="empty"  category="person"  mmax_level="coref"  rule="none"  type="none" />
+<markable id="markable_105" span="word_542" coref_class="empty"  category="person"  mmax_level="coref"  rule="none"  type="none" />
+<markable id="markable_67" span="word_284" coref_class="empty"  category="person"  mmax_level="coref"  rule="none"  type="none" />
+<markable id="markable_104" span="word_538" coref_class="empty"  category="person"  mmax_level="coref"  rule="none"  type="none" />
+<markable id="markable_68" span="word_288" coref_class="empty"  category="person"  mmax_level="coref"  rule="none"  type="none" />
+<markable id="markable_103" span="word_536" coref_class="empty"  category="person"  mmax_level="coref"  rule="none"  type="none" />
+<markable id="markable_69" span="word_290" coref_class="empty"  category="person"  mmax_level="coref"  rule="none"  type="none" />
+<markable id="markable_62" span="word_269" coref_class="empty"  category="person"  mmax_level="coref"  rule="none"  type="none" />
+<markable id="markable_63" span="word_273" coref_class="empty"  category="person"  mmax_level="coref"  rule="none"  type="none" />
+<markable id="markable_64" span="word_276" coref_class="empty"  category="person"  mmax_level="coref"  rule="none"  type="none" />
+<markable id="markable_65" span="word_278" coref_class="empty"  category="person"  mmax_level="coref"  rule="none"  type="none" />
+<markable id="markable_60" span="word_264" coref_class="empty"  category="person"  mmax_level="coref"  rule="none"  type="none" />
+<markable id="markable_61" span="word_267" coref_class="empty"  category="person"  mmax_level="coref"  rule="none"  type="none" />
+<markable id="markable_107" span="word_548" coref_class="empty"  category="person"  mmax_level="coref"  rule="none"  type="none" />
+<markable id="markable_108" span="word_558..word_560" coref_class="empty"  category="organization"  mmax_level="coref"  rule="none"  type="none" />
+<markable id="markable_109" span="word_569" coref_class="empty"  category="organization"  mmax_level="coref"  rule="none"  type="none" />
+<markable id="markable_111" span="word_585" coref_class="empty"  category="organization"  mmax_level="coref"  rule="none"  type="none" />
+<markable id="markable_110" span="word_577" coref_class="empty"  category="organization"  mmax_level="coref"  rule="none"  type="none" />
+<markable id="markable_79" span="word_371" coref_class="empty"  category="organization"  mmax_level="coref"  rule="none"  type="none" />
+<markable id="markable_77" span="word_355" coref_class="empty"  category="organization"  mmax_level="coref"  rule="none"  type="none" />
+<markable id="markable_78" span="word_363" coref_class="empty"  category="organization"  mmax_level="coref"  rule="none"  type="none" />
+<markable id="markable_75" span="word_339" coref_class="empty"  category="organization"  mmax_level="coref"  rule="none"  type="none" />
+<markable id="markable_76" span="word_347" coref_class="empty"  category="organization"  mmax_level="coref"  rule="none"  type="none" />
+<markable id="markable_73" span="word_321..word_322" coref_class="empty"  category="organization"  mmax_level="coref"  rule="none"  type="none" />
+<markable id="markable_74" span="word_330..word_331" coref_class="empty"  category="organization"  mmax_level="coref"  rule="none"  type="none" />
+<markable id="markable_71" span="word_305" coref_class="empty"  category="organization"  mmax_level="coref"  rule="none"  type="none" />
+<markable id="markable_72" span="word_313" coref_class="empty"  category="organization"  mmax_level="coref"  rule="none"  type="none" />
+<markable id="markable_70" span="word_297" coref_class="empty"  category="organization"  mmax_level="coref"  rule="none"  type="none" />
+<markable id="markable_81" span="word_383" coref_class="empty"  category="organization"  mmax_level="coref"  rule="none"  type="none" />
+<markable id="markable_44" span="word_99..word_100" coref_class="empty"  category="person"  mmax_level="coref"  rule="none"  type="none" />
+<markable id="markable_34" span="word_37" coref_class="empty"  category="location"  mmax_level="coref"  rule="none"  type="none" />
+<markable id="markable_80" span="word_376" coref_class="empty"  category="location"  mmax_level="coref"  rule="none"  type="none" />
+<markable id="markable_45" span="word_150" coref_class="empty"  category="organization"  mmax_level="coref"  rule="none"  type="none" />
+<markable id="markable_33" span="word_29" coref_class="empty"  category="organization"  mmax_level="coref"  rule="none"  type="none" />
+<markable id="markable_83" span="word_406" coref_class="empty"  category="person"  mmax_level="coref"  rule="none"  type="none" />
+<markable id="markable_46" span="word_167" coref_class="empty"  category="location"  mmax_level="coref"  rule="none"  type="none" />
+<markable id="markable_36" span="word_43" coref_class="empty"  category="organization"  mmax_level="coref"  rule="none"  type="none" />
+<markable id="markable_82" span="word_387" coref_class="empty"  category="organization"  mmax_level="coref"  rule="none"  type="none" />
+<markable id="markable_47" span="word_182" coref_class="empty"  category="location"  mmax_level="coref"  rule="none"  type="none" />
+<markable id="markable_35" span="word_40" coref_class="empty"  category="location"  mmax_level="coref"  rule="none"  type="none" />
+<markable id="markable_85" span="word_415" coref_class="empty"  category="person"  mmax_level="coref"  rule="none"  type="none" />
+<markable id="markable_48" span="word_182..word_184" coref_class="empty"  category="organization"  mmax_level="coref"  rule="none"  type="none" />
+<markable id="markable_38" span="word_60" coref_class="empty"  category="location"  mmax_level="coref"  rule="none"  type="none" />
+<markable id="markable_84" span="word_409" coref_class="empty"  category="person"  mmax_level="coref"  rule="none"  type="none" />
+<markable id="markable_37" span="word_53" coref_class="empty"  category="organization"  mmax_level="coref"  rule="none"  type="none" />
+<markable id="markable_49" span="word_182..word_186" coref_class="empty"  category="event"  mmax_level="coref"  rule="none"  type="none" />
+<markable id="markable_87" span="word_421" coref_class="empty"  category="person"  mmax_level="coref"  rule="none"  type="none" />
+<markable id="markable_86" span="word_418" coref_class="empty"  category="person"  mmax_level="coref"  rule="none"  type="none" />
+<markable id="markable_39" span="word_82" coref_class="empty"  category="profession"  mmax_level="coref"  rule="none"  type="none" />
+<markable id="markable_89" span="word_430" coref_class="empty"  category="organization"  mmax_level="coref"  rule="none"  type="none" />
+<markable id="markable_88" span="word_425..word_426" coref_class="empty"  category="organization"  mmax_level="coref"  rule="none"  type="none" />
+<markable id="markable_40" span="word_83..word_84" coref_class="empty"  category="person"  mmax_level="coref"  rule="none"  type="none" />
+<markable id="markable_30" span="word_15..word_16" coref_class="empty"  category="organization"  mmax_level="coref"  rule="none"  type="none" />
+<markable id="markable_41" span="word_90..word_91" coref_class="empty"  category="organization"  mmax_level="coref"  rule="none"  type="none" />
+<markable id="markable_42" span="word_95" coref_class="empty"  category="organization"  mmax_level="coref"  rule="none"  type="none" />
+<markable id="markable_32" span="word_22" coref_class="empty"  category="location"  mmax_level="coref"  rule="none"  type="none" />
+<markable id="markable_43" span="word_18" coref_class="empty"  category="organization"  mmax_level="coref"  rule="none"  type="none" />
+<markable id="markable_31" span="word_18..word_20" coref_class="empty"  category="organization"  mmax_level="coref"  rule="none"  type="none" />
+<markable id="markable_90" span="word_449" coref_class="empty"  category="person"  mmax_level="coref"  rule="none"  type="none" />
+<markable id="markable_94" span="word_467" coref_class="empty"  category="person"  mmax_level="coref"  rule="none"  type="none" />
+<markable id="markable_25" span="word_1" coref_class="empty"  category="location"  mmax_level="coref"  rule="none"  type="none" />
+<markable id="markable_57" span="word_255" coref_class="empty"  category="person"  mmax_level="coref"  rule="none"  type="none" />
+<markable id="markable_93" span="word_461" coref_class="empty"  category="person"  mmax_level="coref"  rule="none"  type="none" />
+<markable id="markable_58" span="word_258" coref_class="empty"  category="person"  mmax_level="coref"  rule="none"  type="none" />
+<markable id="markable_92" span="word_457" coref_class="empty"  category="person"  mmax_level="coref"  rule="none"  type="none" />
+<markable id="markable_55" span="word_233..word_234" coref_class="empty"  category="organization"  mmax_level="coref"  rule="none"  type="none" />
+<markable id="markable_91" span="word_455" coref_class="empty"  category="person"  mmax_level="coref"  rule="none"  type="none" />
+<markable id="markable_56" span="word_251..word_252" coref_class="empty"  category="person"  mmax_level="coref"  rule="none"  type="none" />
+<markable id="markable_98" span="word_494" coref_class="empty"  category="organization"  mmax_level="coref"  rule="none"  type="none" />
+<markable id="markable_29" span="word_11" coref_class="empty"  category="location"  mmax_level="coref"  rule="none"  type="none" />
+<markable id="markable_97" span="word_486" coref_class="empty"  category="organization"  mmax_level="coref"  rule="none"  type="none" />
+<markable id="markable_28" span="word_8..word_10" coref_class="empty"  category="time"  mmax_level="coref"  rule="none"  type="none" />
+<markable id="markable_96" span="word_476..word_477" coref_class="empty"  category="organization"  mmax_level="coref"  rule="none"  type="none" />
+<markable id="markable_27" span="word_7" coref_class="empty"  category="location"  mmax_level="coref"  rule="none"  type="none" />
+<markable id="markable_59" span="word_261" coref_class="empty"  category="person"  mmax_level="coref"  rule="none"  type="none" />
+<markable id="markable_95" span="word_470" coref_class="empty"  category="person"  mmax_level="coref"  rule="none"  type="none" />
+<markable id="markable_26" span="word_1..word_2" coref_class="empty"  category="organization"  mmax_level="coref"  rule="none"  type="none" />
+<markable id="markable_50" span="word_190..word_191" coref_class="empty"  category="organization"  mmax_level="coref"  rule="none"  type="none" />
+<markable id="markable_99" span="word_502" coref_class="empty"  category="organization"  mmax_level="coref"  rule="none"  type="none" />
+<markable id="markable_53" span="word_227" coref_class="empty"  category="location"  mmax_level="coref"  rule="none"  type="none" />
+<markable id="markable_54" span="word_229" coref_class="empty"  category="organization"  mmax_level="coref"  rule="none"  type="none" />
+<markable id="markable_51" span="word_207" coref_class="empty"  category="location"  mmax_level="coref"  rule="none"  type="none" />
+<markable id="markable_52" span="word_220" coref_class="empty"  category="organization"  mmax_level="coref"  rule="none"  type="none" />
 </markables>

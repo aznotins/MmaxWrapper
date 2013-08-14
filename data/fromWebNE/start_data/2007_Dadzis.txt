@@ -5,7 +5,7 @@ I7	-	I7	-	O
 (	z	(	zb	O	
 968	x	968	xn	O	
 )	z	)	zb	O	
-2_0_0_7		2_0_0_7	xn	time
+2_0_0_7	x	2_0_0_7	xn	time
 <p/>	-	<p/>	-	O
 Iznāk	v	iznākt	venipi130an	O	
 kopš	s	kopš	sppdn	O	
@@ -9572,8 +9572,8 @@ viņi	p	viņš	pp3mpnn	O
 iestērķelēja	v	iestērķelēt	v_nist230an	O	
 matus	n	mats	ncmpa1	O	
 grebenē	n	grebene	n_fsl5	O	
-un		un	ccs	O	
-'		'	zs	O	
+un	c	un	ccs	O	
+'	z	'	zs	O	
 protestēja	v	protestēt	vmnisi230an	O	
 pilnīgi	a	pilnīgs	afmpnnp	O	
 pret	s	pret	sppdy	O	
@@ -11052,7 +11052,7 @@ Jūs	p	jūs	pp20pan	O
 glābt	v	glābt	vmnn0t1000n	O	
 no	n	Nos	npmsv1	O	
 kļūmīga	a	kļūmīgs	afmsgnp	O	
-s_o		s_s	a_mpgy_	O	
+s_o	a	s_s	a_mpgy_	O	
 |	x	|	xx	O	
 a	-	a	-	O	
 !	z	!	zs	O
@@ -13862,7 +13862,7 @@ Biedrība	n	biedrība	ncfsn4	O
 -	z	-	zd	O	
 ,	z	,	zc	O	
 -	z	-	zd	O	
-?		?	i_	O	
+?	i	?	i_	O	
 ...	z	...	zs	O	
 :	z	:	zo	O	
 nodarbojas	v	nodarboties	vmyipi230an	O	
@@ -13888,7 +13888,7 @@ un	c	un	ccs	O
 [	z	[	zb	O	
 JĒk	n	Jēks	npmsv1	O	
 JnTm	-	JnTm	-	O	
-Q_j		Q_j	xf	O	
+Q_j	x	Q_j	xf	O	
 |	x	|	xx	O	
 vai	c	vai	css	O	
 sazinieties	v	sazināties	vmym0i32pan	O	
@@ -13901,7 +13901,7 @@ uz	s	uz	sppdy	O
 ļr	-	ļr	-	O	
 /	z	/	zx	O	
 *	x	*	xx	O	
-r_s_i_l_f_i		r_s_i_l_f_s	n_mpn1	O	
+r_s_i_l_f_i	n	r_s_i_l_f_s	n_mpn1	O	
 ^	x	^	xx	O	
 ugunszime@gmail.com	-	ugunszime@gmail.com	-	O	
 ;	z	;	zc	O	
@@ -13928,7 +13928,7 @@ f	-	f	-	O
 ^	x	^	xx	O	
 ^	x	^	xx	O	
 ^	x	^	xx	O	
-f_f_P		f_f_P	xf	O	
+f_f_P	x	f_f_P	xf	O	
 ^	x	^	xx	O	
 d	-	d	-	O	
 ^	x	^	xx	O	
@@ -14029,12 +14029,12 @@ kaki	n	kaks	n_mpn1	O
 .	z	.	zs	O	
 Tā_kā	c	tā_kā	csc	O	
 notiek	v	notikt	vmnipi130an	O	
-d_i_e_z		d_i_e_z	xf	O	
-^		^	xx	O	
-d_z		d_z	xf	O	
-^		^	xx	O	
-v_n_i_e_k_u_s		v_n_i_e_k_u_s	n_msn1	O	
-^		^	xx	O
+d_i_e_z	x	d_i_e_z	xf	O	
+^	x	^	xx	O	
+d_z	x	d_z	xf	O	
+^	x	^	xx	O	
+v_n_i_e_k_u_s	n	v_n_i_e_k_u_s	n_msn1	O	
+^	x	^	xx	O
 <p/>	-	<p/>	-	O
 En	n	Ens	npmsv1	O	
 Passant	v	passant	v_nn0_1000n	O
@@ -19314,7 +19314,7 @@ Nore	n	Nore	npfsn5	person
 ļļESTuRiSKS	n	ļļesturisks	n_msn1	O	
 IFSMTS	v	ifsmt	v_npdmsnpsn	O	
 VAIOŅS	n	vaioņs	n_msn1	O	
-f_r_S_A_k_E_M		f_r_S_A_k_E_M	xf	O	
+f_r_S_A_k_E_M	x	f_r_S_A_k_E_M	xf	O	
 *	x	*	xx	O
 <p/>	-	<p/>	-	O
 Es	p	es	pp10snn	O	
@@ -19444,7 +19444,7 @@ SALTĀS	v	salt	vmnpdfplpsn	O
 a	-	a	-	O	
 *	x	*	xx	O	
 AWms	n	awms	n_msn1	O	
-N_i_s_T		N_i_s_T	xf	O	
+N_i_s_T	x	N_i_s_T	xf	O	
 §	x	§	xx	O	
 £	-	£	-	O	
 i3-4S	n	i3-4s	n_msn1	O
@@ -20748,7 +20748,7 @@ NĒRSIS	v	nērst	vmnpdmsnasn	O
 20.	x	20.	xo	time	
 IV-20	-	IV-20	-	time	
 .	z	.	zs	time	
-V_a		v_a	n_fsn4	time	
+V_a	n	v_a	n_fsn4	time	
 esat	v	būt	vcnipii2pan	O	
 pamanījusi	v	pamanīt	vmnpdfsnasn	O	
 ,	z	,	zc	O	
@@ -21035,7 +21035,7 @@ rARI	n	rars	n_mpn1	O
 23.	x	23.	xo	time	
 IX-23	-	IX-23	-	time	
 .	z	.	zs	time	
-X_s		x_s	n_msn1	time	
+X_s	x	x_s	n_msn1	time	
 esat	v	būt	vcnipii2pan	O	
 uzsākusi	v	uzsākt	vmnpdfsnasn	O	
 strīdu	n	strīds	ncmsa1	O	
@@ -21717,10 +21717,10 @@ klientiem	n	klients	ncmpd1	O
 -	z	-	zd	O	
 ļ	-	ļ	-	O	
 559727_559742	x	559727_559742	xn	O	
-l_l_H		l_l_H	-	O	
+l_l_H	-	l_l_H	-	O	
 ^	x	^	xx	O	
 ^	x	^	xx	O	
-f_l_ß_U		f_l_ß_s	n_msa1	O	
+f_l_ß_U	n	f_l_ß_s	n_msa1	O	
 ^	x	^	xx	O	
 ^	x	^	xx	O	
 ļ	-	ļ	-	O	
@@ -21735,15 +21735,15 @@ ST	-	ST	-	O
 MISSI	n	Misse	npfsa5	O	
 °	-	°	-	O	
 N	-	N	-	O	
-'		'	zs	O	
-'		'	zs	O	
-,		,	zc	O	
+'	z	'	zs	O	
+'	z	'	zs	O	
+,	z	,	zc	O	
 Scissor	-	Scissor	-	organization	
 Sisters	n	sisters	n_msn1	organization	
 -	z	-	zd	O	
 1	x	1	xn	O	
-Don		Don	xx	product	
-'		'	zs	product	
+Don	x	Don	xx	product	
+'	z	'	zs	product	
 t	-	t	-	product	
 Feel	-	Feel	-	product	
 Like	n	Like	npfsn5	product	
@@ -21929,8 +21929,8 @@ KAMASUTRA	n	kamasutrs	n_msg1	O
 Fort	n	forts	ncmsv1	O	
 Minor	n	minors	ncmsv1	O	
 -	z	-	zd	O	
-VVhere		vvhere	n_fsn5	product	
-'		'	zs	product	
+VVhere	n	vvhere	n_fsn5	product	
+'	z	'	zs	product	
 d	-	d	-	product	
 You	n	yos	n_msa1	product	
 Go	-	Go	-	product	
@@ -22071,12 +22071,12 @@ g	-	g	-	O
 -	z	-	zd	O	
 Ho	n	Ho	np___0	O	
 „	z	„	zq	O	
-y		y	i_	O	
-D_o		D_o	n_____	O	
+y	i	y	i_	O	
+D_o	n	D_o	n_____	O	
 „	z	„	zq	O	
 y	-	y	-	O	
 551191_559660	x	551191_559660	xn	O	
-M_K_t_t		m_k_t_t	v_nn0_1000n	O	
+M_K_t_t	v	m_k_t_t	v_nn0_1000n	O	
 ^	x	^	xx	O	
 ^	x	^	xx	O	
 559625	x	559625	xn	O	
@@ -22106,8 +22106,8 @@ Muse	n	Muse	npfsn5	organization
 Invincible	n	invincible	n_fsn5	product	
 559724_559739	x	559724_559739	xn	O	
 ■	-	■	-	O	
-BgĻT		BgĻT	xx	O	
-'		'	zs	O	
+BgĻT	x	BgĻT	xx	O	
+'	z	'	zs	O	
 Jg	-	Jg	-	O	
 -	z	-	zd	O	
 flf	-	flf	-	O	
@@ -22169,7 +22169,7 @@ fluīda	n	fluīds	ncmsg1	O
 iaH	-	iaH	-	O	
 -	z	-	zd	O	
 Heßo3	-	Heßo3	-	O	
-M_O		m_s	a_msay_	O	
+M_O	a	m_s	a_msay_	O	
 *	x	*	xx	O	
 Hoe	n	hoe	n_fsn5	O	
 Bo3mowho	a	bo3mowhs	a_msay_	O	
@@ -22202,7 +22202,7 @@ a	-	a	-	O
 .	z	.	zs	O	
 J	-	J	-	O	
 |	x	|	xx	O	
-S_f		S_f	xf	O	
+S_f	x	S_f	xf	O	
 ^	x	^	xx	O	
 ^	x	^	xx	O	
 BPf3tr	-	BPf3tr	-	O	
@@ -22223,9 +22223,9 @@ un	c	un	ccs	O
 objektu	n	objekts	ncmsa1	O	
 atbalstu	n	atbalsts	ncmsa1	O	
 ■	-	■	-	O	
-PJBPJPHHS		pjbpjphhs	n_msn1	O	
-'		'	zs	O	
-I_M		I_M	xx	O	
+PJBPJPHHS	n	pjbpjphhs	n_msn1	O	
+'	z	'	zs	O	
+I_M	z	I_M	xx	O	
 ~	x	~	xx	O	
 ~	x	~	xx	O	
 r	-	r	-	O	
@@ -22236,7 +22236,7 @@ Wait	v	wait	v_nn0_1000n	product
 a	-	a	-	product	
 Minūte	n	minūte	ncfsn5	product	
 558248_557610	x	558248_557610	xn	O	
-E_P		E_P	y	O	
+E_P	y	E_P	y	O	
 ^	x	^	xx	O	
 H	-	H	-	O	
 559560	x	559560	xn	O	
@@ -22291,9 +22291,9 @@ automatL	-	automatL	-	O
 Pussycat	v	pussyct	v_nip_12pan	organization	
 Dolls	n	dolls	n_msn1	organization	
 -	z	-	zd	O	
-Don		Don	i_	product	
-'		'	zs	product	
-t		t	xx	product	
+Don	i	Don	i_	product	
+'	z	'	zs	product	
+t	x	t	xx	product	
 Cha	n	chs	n_msg1	product	
 551327_555984	x	551327_555984	xn	O	
 %	x	%	xx	O	
@@ -22414,7 +22414,7 @@ ZT	-	ZT	-	O
 ,	z	,	zc	O	
 ,	z	,	zc	O	
 ām	-	ām	-	O	
-I_r		I_r	xf	O	
+I_r	x	I_r	xf	O	
 ~	x	~	xx	O	
 JZZJZZZ7	-	JZZJZZZ7	-	O	
 £	-	£	-	O	
@@ -22528,7 +22528,7 @@ FITNESS	n	fitness	n_msn1	O
 BIBLE	n	bible	n_fsn5	O	
 "	z	"	zq	O	
 «	z	«	zq	O	
-S_t_o_a_i		s_t_o_a_s	n_mpn1	O	
+S_t_o_a_i	n	s_t_o_a_s	n_mpn1	O	
 *	x	*	xx	O	
 Muzikālās	a	muzikāla	affplnp	O	
 Atraugas	n	atraugas	n_fdn4	O	
@@ -22553,7 +22553,7 @@ iHL	-	iHL	-	O
 Orgasms	n	orgasms	n_msn1	O	
 558082	x	558082	xn	O	
 BK	-	BK	-	O	
-f_l		f_l	xf	O	
+f_l	f	f_l	xf	O	
 |	x	|	xx	O	
 /	z	/	zx	O	
 ^	x	^	xx	O	
@@ -22580,11 +22580,11 @@ I	-	I	-	O
 )	z	)	zb	O	
 jHB	-	jHB	-	O	
 BBE	n	bbe	n_fsn5	O	
-N_o_k_i_a		n_o_k_i_a	n_fsn4	O	
-^		^	xx	O	
-a_m_s_u_n		a_m_s_u_n	xf	O	
-^		^	xx	O	
-S_t_e_m_e_r		S_t_e_m_e_r	xf	O	
+N_o_k_i_a	n	n_o_k_i_a	n_fsn4	O	
+^	x	^	xx	O	
+a_m_s_u_n	x	a_m_s_u_n	xf	O	
+^	x	^	xx	O	
+S_t_e_m_e_r	x	S_t_e_m_e_r	xf	O	
 *	x	*	xx	O	
 8	x	8	xn	O	
 '	z	'	zx	O	
@@ -22646,7 +22646,7 @@ v	-	v	-	O
 sSsS	n	ssss	n_msn1	O	
 JĒMĒĒĒ	n	jēmēēe	n_fsl5	O	
 PBBMB	-	PBBMB	-	O	
-A_H		A_H	xf	O	
+A_H	x	A_H	xf	O	
 |	x	|	xx	O	
 al	-	al	-	O	
 "	z	"	zq	O	
@@ -22668,7 +22668,7 @@ Putins	n	Putins	npmsn1	person
 Atbildi	n	atbilde	ncfsa5	O	
 !	z	!	zs	O	
 550916	x	550916	xn	O	
-f_l		f_l	xf	O	
+f_l	x	f_l	xf	O	
 ^	x	^	xx	O	
 ^	x	^	xx	O	
 B	-	B	-	O	
@@ -22697,23 +22697,23 @@ B	-	B	-	O
 Siemens	n	siemens	n_msn1	product	
 un	c	un	ccs	O	
 SonyEricsson	-	SonyEricsson	-	product	
-j_M		j_M	xf	O	
-^		^	xx	O	
-M_ß_W_M_ß_M_H_ß_M_i		m_ß_w_m_ß_m_h_ß_m_s	n_mpn1	O	
-^		^	xx	O	
-^		^	xx	O	
-^		^	xx	O	
-^		^	xx	O	
-^		^	xx	O	
-^		^	xx	O	
-^		^	xx	O	
-^		^	xx	O	
-^		^	xx	O	
-^		^	xx	O	
-^		^	xx	O	
-B_H		B_H	xf	O	
-^		^	xx	O	
-^		^	xx	O	
+j_M	x	j_M	xf	O	
+^	x	^	xx	O	
+M_ß_W_M_ß_M_H_ß_M_i	x	m_ß_w_m_ß_m_h_ß_m_s	n_mpn1	O	
+^	x	^	xx	O	
+^	x	^	xx	O	
+^	x	^	xx	O	
+^	x	^	xx	O	
+^	x	^	xx	O	
+^	x	^	xx	O	
+^	x	^	xx	O	
+^	x	^	xx	O	
+^	x	^	xx	O	
+^	x	^	xx	O	
+^	x	^	xx	O	
+B_H	x	B_H	xf	O	
+^	x	^	xx	O	
+^	x	^	xx	O	
 559621	x	559621	xn	O	
 telefoniem	n	telefons	ncmpd1	O	
 ar	n	Ars	npmsv1	O	
@@ -23001,7 +23001,7 @@ ekrānu	n	ekrāns	ncmsa1	O
 un	c	un	ccs	O	
 GPRS	n	gprs	n_msn1	O	
 .	z	.	zs	O	
-z_e		z_e	n_fsn5	organization	
+z_e	n	z_e	n_fsn5	organization	
 |	x	|	xx	organization	
 |	x	|	xx	organization	
 i	-	i	-	organization	
