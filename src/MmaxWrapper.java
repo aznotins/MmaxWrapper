@@ -155,9 +155,10 @@ public class MmaxWrapper {
         	s.append(ct.position); s.append("\t");
             s.append(ct.word.replace(" ",  "_")); s.append("\t");
             s.append(ct.lemma.replace(" ",  "_")); s.append("\t");
-            s.append(ct.tag); s.append("\t");
+            if (ct.tag.trim().length() > 0) s.append(ct.tag); else s.append(ct.fullTag); s.append("\t"); // empty small tag fix
             s.append(ct.fullTag); s.append("\t");
             s.append(ct.morphoFeatures); s.append("\t");
+            if (ct.syntax == null) s.append("_"); else s.append(ct.syntax); s.append("\t");
             if (ct.category.equals("other")) {
             	s.append("O\t_\t_\t");
             } else {

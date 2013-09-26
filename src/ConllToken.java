@@ -16,6 +16,7 @@ public class ConllToken {
     String tag;
     String fullTag;
     String morphoFeatures;
+    String syntax;
     
     boolean sent_start;
     
