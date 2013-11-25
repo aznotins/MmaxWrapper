@@ -1,7 +1,7 @@
 REM @echo off
 SET FOLDER=%~dp0
-set "BASE_DIR=%FOLDER%data_refreshed\"
-set "BASE_CONLL_DIR=%FOLDER%data_refreshed\conll\"
+set "BASE_DIR=%FOLDER%data\"
+set "BASE_CONLL_DIR=%FOLDER%data_refreshed\conll_25-11-2013\"
 set "OUTPUT_DIR=%FOLDER%ner-train-25-11-2013\"
 if not exist %OUTPUT_DIR% mkdir %OUTPUT_DIR%
 for %%f in (%FOLDER%process\*.mmax) do (

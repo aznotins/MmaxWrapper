@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE markables SYSTEM "markables.dtd">
+<markables xmlns="www.eml.org/NameSpaces/coref">
+<markable id="markable_7" span="word_1..word_2" coref_class="empty"  category="media"  mmax_level="coref"  rule="none"  type="none" />
+<markable id="markable_16" span="word_73..word_74" coref_class="empty"  category="person"  mmax_level="coref"  rule="none"  type="none" />
+<markable id="markable_17" span="word_88" coref_class="empty"  category="location"  mmax_level="coref"  rule="none"  type="none" />
+<markable id="markable_12" span="word_31..word_32" coref_class="empty"  category="person"  mmax_level="coref"  rule="none"  type="none" />
+<markable id="markable_14" span="word_66..word_70" coref_class="empty"  category="organization"  mmax_level="coref"  rule="none"  type="none" />
+<markable id="markable_13" span="word_67" coref_class="empty"  category="organization"  mmax_level="coref"  rule="none"  type="none" />
+<markable id="markable_19" span="word_29..word_30" coref_class="empty"  category="profession"  mmax_level="coref"  rule="none"  type="none" />
+<markable id="markable_10" span="word_25..word_27" coref_class="empty"  category="organization"  mmax_level="coref"  rule="none"  type="none" />
+<markable id="markable_21" span="word_17" coref_class="empty"  category="time"  mmax_level="coref"  rule="none"  type="none" />
+<markable id="markable_8" span="word_7..word_9" coref_class="empty"  category="time"  mmax_level="coref"  rule="none"  type="none" />
+<markable id="markable_20" span="word_71..word_72" coref_class="empty"  category="profession"  mmax_level="coref"  rule="none"  type="none" />
+<markable id="markable_9" span="word_11..word_12" coref_class="empty"  category="media"  mmax_level="coref"  rule="none"  type="none" />
+</markables>

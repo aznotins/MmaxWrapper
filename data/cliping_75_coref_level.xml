@@ -1,30 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE markables SYSTEM "markables.dtd">
 <markables xmlns="www.eml.org/NameSpaces/coref">
+<markable id="markable_254" span="word_731" coref_class="empty"  category="time"  mmax_level="coref"  rule="none"  type="none" />
+<markable id="markable_253" span="word_60..word_61" coref_class="empty"  category="organization"  mmax_level="coref"  rule="none"  type="none" />
+<markable id="markable_250" span="word_10" coref_class="empty"  category="location"  mmax_level="coref"  rule="none"  type="none" />
+<markable id="markable_252" span="word_148" coref_class="empty"  category="location"  mmax_level="coref"  rule="none"  type="none" />
+<markable id="markable_251" span="word_17" coref_class="empty"  category="location"  mmax_level="coref"  rule="none"  type="none" />
 <markable id="markable_102" span="word_172" coref_class="empty"  category="person"  mmax_level="coref"  rule="none"  type="none" />
 <markable id="markable_101" span="word_169..word_170" coref_class="empty"  category="person"  mmax_level="coref"  rule="none"  type="none" />
 <markable id="markable_100" span="word_167" coref_class="empty"  category="person"  mmax_level="coref"  rule="none"  type="none" />
-<markable id="markable_106" span="word_184" coref_class="empty"  category="location"  mmax_level="coref"  rule="none"  type="none" />
 <markable id="markable_105" span="word_181" coref_class="empty"  category="person"  mmax_level="coref"  rule="none"  type="none" />
 <markable id="markable_104" span="word_178" coref_class="empty"  category="person"  mmax_level="coref"  rule="none"  type="none" />
 <markable id="markable_103" span="word_174..word_175" coref_class="empty"  category="person"  mmax_level="coref"  rule="none"  type="none" />
-<markable id="markable_108" span="word_184..word_187" coref_class="empty"  category="organization"  mmax_level="coref"  rule="none"  type="none" />
+<markable id="markable_249" span="word_33..word_34" coref_class="empty"  category="organization"  mmax_level="coref"  rule="none"  type="none" />
+<markable id="markable_248" span="word_535..word_536" coref_class="empty"  category="organization"  mmax_level="coref"  rule="none"  type="none" />
+<markable id="markable_247" span="word_184..word_186" coref_class="empty"  category="organization"  mmax_level="coref"  rule="none"  type="none" />
+<markable id="markable_246" span="word_50" coref_class="empty"  category="organization"  mmax_level="coref"  rule="none"  type="none" />
+<markable id="markable_245" span="word_95" coref_class="empty"  category="organization"  mmax_level="coref"  rule="none"  type="none" />
+<markable id="markable_244" span="word_967..word_968" coref_class="empty"  category="organization"  mmax_level="coref"  rule="none"  type="none" />
+<markable id="markable_243" span="word_945..word_946" coref_class="empty"  category="organization"  mmax_level="coref"  rule="none"  type="none" />
+<markable id="markable_242" span="word_771..word_772" coref_class="empty"  category="organization"  mmax_level="coref"  rule="none"  type="none" />
+<markable id="markable_241" span="word_753..word_754" coref_class="empty"  category="organization"  mmax_level="coref"  rule="none"  type="none" />
 <markable id="markable_109" span="word_199" coref_class="empty"  category="person"  mmax_level="coref"  rule="none"  type="none" />
 <markable id="markable_111" span="word_203" coref_class="empty"  category="person"  mmax_level="coref"  rule="none"  type="none" />
 <markable id="markable_110" span="word_201" coref_class="empty"  category="person"  mmax_level="coref"  rule="none"  type="none" />
 <markable id="markable_113" span="word_233..word_234" coref_class="empty"  category="person"  mmax_level="coref"  rule="none"  type="none" />
 <markable id="markable_112" span="word_213" coref_class="empty"  category="person"  mmax_level="coref"  rule="none"  type="none" />
 <markable id="markable_79" span="word_33" coref_class="empty"  category="location"  mmax_level="coref"  rule="none"  type="none" />
-<markable id="markable_114" span="word_257" coref_class="empty"  category="location"  mmax_level="coref"  rule="none"  type="none" />
+<markable id="markable_114" span="word_257..word_258" coref_class="empty"  category="organization"  mmax_level="coref"  rule="none"  type="none" />
 <markable id="markable_117" span="word_150..word_151" coref_class="empty"  category="profession"  mmax_level="coref"  rule="none"  type="none" />
-<markable id="markable_77" span="word_17" coref_class="empty"  category="location"  mmax_level="coref"  rule="none"  type="none" />
 <markable id="markable_116" span="word_263..word_264" coref_class="empty"  category="person"  mmax_level="coref"  rule="none"  type="none" />
 <markable id="markable_78" span="word_26..word_27" coref_class="empty"  category="organization"  mmax_level="coref"  rule="none"  type="none" />
 <markable id="markable_75" span="word_7..word_9" coref_class="empty"  category="time"  mmax_level="coref"  rule="none"  type="none" />
-<markable id="markable_76" span="word_10" coref_class="empty"  category="location"  mmax_level="coref"  rule="none"  type="none" />
+<markable id="markable_76" span="word_10..word_11" coref_class="empty"  category="organization"  mmax_level="coref"  rule="none"  type="none" />
 <markable id="markable_73" span="word_1..word_2" coref_class="empty"  category="media"  mmax_level="coref"  rule="none"  type="none" />
 <markable id="markable_74" span="word_6" coref_class="empty"  category="location"  mmax_level="coref"  rule="none"  type="none" />
-<markable id="markable_72" span="word_1" coref_class="empty"  category="location"  mmax_level="coref"  rule="none"  type="none" />
 <markable id="markable_213" span="word_1159" coref_class="empty"  category="person"  mmax_level="coref"  rule="none"  type="none" />
 <markable id="markable_214" span="word_1171" coref_class="empty"  category="person"  mmax_level="coref"  rule="none"  type="none" />
 <markable id="markable_215" span="word_1173" coref_class="empty"  category="person"  mmax_level="coref"  rule="none"  type="none" />
@@ -89,6 +99,8 @@
 <markable id="markable_232" span="word_1266" coref_class="empty"  category="location"  mmax_level="coref"  rule="none"  type="none" />
 <markable id="markable_233" span="word_1284" coref_class="empty"  category="location"  mmax_level="coref"  rule="none"  type="none" />
 <markable id="markable_234" span="word_1286" coref_class="empty"  category="location"  mmax_level="coref"  rule="none"  type="none" />
+<markable id="markable_235" span="word_4" coref_class="empty"  category="profession"  mmax_level="coref"  rule="none"  type="none" />
+<markable id="markable_236" span="word_148..word_149" coref_class="empty"  category="organization"  mmax_level="coref"  rule="none"  type="none" />
 <markable id="markable_229" span="word_1257" coref_class="empty"  category="person"  mmax_level="coref"  rule="none"  type="none" />
 <markable id="markable_183" span="word_1001" coref_class="empty"  category="person"  mmax_level="coref"  rule="none"  type="none" />
 <markable id="markable_81" span="word_60" coref_class="empty"  category="location"  mmax_level="coref"  rule="none"  type="none" />
@@ -107,7 +119,7 @@
 <markable id="markable_87" span="word_86..word_87" coref_class="empty"  category="person"  mmax_level="coref"  rule="none"  type="none" />
 <markable id="markable_182" span="word_999" coref_class="empty"  category="person"  mmax_level="coref"  rule="none"  type="none" />
 <markable id="markable_89" span="word_92..word_93" coref_class="empty"  category="person"  mmax_level="coref"  rule="none"  type="none" />
-<markable id="markable_127" span="word_402" coref_class="empty"  category="location"  mmax_level="coref"  rule="none"  type="none" />
+<markable id="markable_127" span="word_402..word_403" coref_class="empty"  category="organization"  mmax_level="coref"  rule="none"  type="none" />
 <markable id="markable_88" span="word_89..word_90" coref_class="empty"  category="person"  mmax_level="coref"  rule="none"  type="none" />
 <markable id="markable_128" span="word_406" coref_class="empty"  category="organization"  mmax_level="coref"  rule="none"  type="none" />
 <markable id="markable_125" span="word_392" coref_class="empty"  category="location"  mmax_level="coref"  rule="none"  type="none" />
@@ -130,7 +142,6 @@
 <markable id="markable_224" span="word_1232" coref_class="empty"  category="person"  mmax_level="coref"  rule="none"  type="none" />
 <markable id="markable_225" span="word_1234..word_1235" coref_class="empty"  category="person"  mmax_level="coref"  rule="none"  type="none" />
 <markable id="markable_196" span="word_1065" coref_class="empty"  category="person"  mmax_level="coref"  rule="none"  type="none" />
-<markable id="markable_94" span="word_148" coref_class="empty"  category="location"  mmax_level="coref"  rule="none"  type="none" />
 <markable id="markable_219" span="word_1206" coref_class="empty"  category="person"  mmax_level="coref"  rule="none"  type="none" />
 <markable id="markable_197" span="word_1074" coref_class="empty"  category="person"  mmax_level="coref"  rule="none"  type="none" />
 <markable id="markable_93" span="word_139" coref_class="empty"  category="person"  mmax_level="coref"  rule="none"  type="none" />
@@ -141,7 +152,7 @@
 <markable id="markable_217" span="word_1180" coref_class="empty"  category="location"  mmax_level="coref"  rule="none"  type="none" />
 <markable id="markable_195" span="word_1063" coref_class="empty"  category="person"  mmax_level="coref"  rule="none"  type="none" />
 <markable id="markable_91" span="word_130..word_131" coref_class="empty"  category="person"  mmax_level="coref"  rule="none"  type="none" />
-<markable id="markable_131" span="word_451" coref_class="empty"  category="location"  mmax_level="coref"  rule="none"  type="none" />
+<markable id="markable_131" span="word_451..word_452" coref_class="empty"  category="organization"  mmax_level="coref"  rule="none"  type="none" />
 <markable id="markable_192" span="word_1049" coref_class="empty"  category="person"  mmax_level="coref"  rule="none"  type="none" />
 <markable id="markable_98" span="word_161..word_162" coref_class="empty"  category="person"  mmax_level="coref"  rule="none"  type="none" />
 <markable id="markable_193" span="word_1051" coref_class="empty"  category="person"  mmax_level="coref"  rule="none"  type="none" />
@@ -152,10 +163,9 @@
 <markable id="markable_137" span="word_493" coref_class="empty"  category="person"  mmax_level="coref"  rule="none"  type="none" />
 <markable id="markable_138" span="word_495..word_496" coref_class="empty"  category="person"  mmax_level="coref"  rule="none"  type="none" />
 <markable id="markable_99" span="word_164..word_165" coref_class="empty"  category="person"  mmax_level="coref"  rule="none"  type="none" />
-<markable id="markable_139" span="word_498" coref_class="empty"  category="organization"  mmax_level="coref"  rule="none"  type="none" />
+<markable id="markable_139" span="word_498" coref_class="empty"  category="other"  mmax_level="coref"  rule="none"  type="none" />
 <markable id="markable_132" span="word_466..word_467" coref_class="empty"  category="person"  mmax_level="coref"  rule="none"  type="none" />
 <markable id="markable_133" span="word_471..word_472" coref_class="empty"  category="person"  mmax_level="coref"  rule="none"  type="none" />
 <markable id="markable_198" span="word_1076" coref_class="empty"  category="person"  mmax_level="coref"  rule="none"  type="none" />
 <markable id="markable_134" span="word_474..word_475" coref_class="empty"  category="person"  mmax_level="coref"  rule="none"  type="none" />
-<markable id="markable_135" span="word_480" coref_class="empty"  category="location"  mmax_level="coref"  rule="none"  type="none" />
 </markables>

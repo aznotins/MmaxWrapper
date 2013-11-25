@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE markables SYSTEM "markables.dtd">
+<markables xmlns="www.eml.org/NameSpaces/coref">
+<markable id="markable_7" span="word_1..word_2" coref_class="empty"  category="media"  mmax_level="coref"  rule="none"  type="none" />
+<markable id="markable_10" span="word_65" coref_class="empty"  category="organization"  mmax_level="coref"  rule="none"  type="none" />
+<markable id="markable_8" span="word_9..word_11" coref_class="empty"  category="time"  mmax_level="coref"  rule="none"  type="none" />
+<markable id="markable_11" span="word_33" coref_class="empty"  category="time"  mmax_level="coref"  rule="none"  type="none" />
+<markable id="markable_9" span="word_13..word_14" coref_class="empty"  category="media"  mmax_level="coref"  rule="none"  type="none" />
+</markables>

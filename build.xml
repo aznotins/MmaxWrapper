@@ -154,7 +154,7 @@
 
 	  	<copy file="${wrapper.dir}/dist/MmaxWrapper.jar" todir="${dist}"/>
 		
-		<zip destfile="MmaxWrapper.zip" basedir="." includes="data/**,dist/**,lib/**,*.sh,*.bat,README.txt" />
+		<zip destfile="MmaxWrapper.zip" basedir="." includes="data/**,dist/**,lib/**,*.sh,*.bat,*.py,README.txt" />
 	  </target>
 	
 	
