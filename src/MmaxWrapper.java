@@ -1,11 +1,11 @@
-import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -28,6 +28,7 @@ public class MmaxWrapper {
 	static String forNer = "";
 	static String importWebNe = "";
 	static int conllNeColumn = -1;
+	static String exportCategories = "";
 	
 	
 	static String MMAX_STRING = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n" +
@@ -147,28 +148,40 @@ public class MmaxWrapper {
     
     
     public void exportForNer(Conll conll, String fileName) throws IOException {
+    	Set<String> categories = new HashSet<String>();
+    	String[] categoriesArr = exportCategories.split(",");
+    	boolean match = false;
+    	if (categoriesArr.length > 0) match = true;
+    	categories.addAll(Arrays.asList(categoriesArr));
+    	
     	BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(fileName),"UTF-8"));
     	String eol = System.getProperty("line.separator");        
         for (int token_i = 0; token_i < conll.getSize(); token_i++) {
         	StringBuilder s = new StringBuilder();
+        	StringBuilder nf = new StringBuilder(); // ner features
         	ConllToken ct = conll.getToken(token_i);
         	s.append(ct.position); s.append("\t");
             s.append(ct.word.replace(" ",  "_")); s.append("\t");
             s.append(ct.lemma.replace(" ",  "_")); s.append("\t");
             if (ct.tag.trim().length() > 0) s.append(ct.tag); else s.append(ct.fullTag); s.append("\t"); // empty small tag fix
             s.append(ct.fullTag); s.append("\t");
-            s.append(ct.morphoFeatures); s.append("\t");
+            s.append(ct.morphoFeatures); s.append("\t");            
+            
             if (ct.syntax == null) s.append("_"); else s.append(ct.syntax); s.append("\t");
-            if (ct.category.equals("other")) {
-            	s.append("O\t_\t_\t");
-            } else {
+            if (!match || categories.contains(ct.category)) {
             	s.append(ct.category); s.append("\t");
-            	String ct_start = ct.cat_start?"START":"_";
-                s.append(ct_start); s.append("\t");
-                String ct_end = ct.cat_end?"END":"_";
-                s.append(ct_end); s.append("\t");
-            }
-            s.append(ct.fullTag.charAt(0)); s.append("\t");
+            	nf.append(ct.cat_start?"|ner_start=1":"");
+            	nf.append(ct.cat_end?"|ner_end=1":"");
+            } else {
+            	s.append("O\t");
+            }            
+        	nf.append("|ner_annotation="+ct.category);
+        	nf.append("|ner_pos="+ct.fullTag.charAt(0));
+        	
+            if (nf.length() > 0) nf.deleteCharAt(0);
+            String nerFeatures = nf.toString();            
+            s.append(nerFeatures);
+            
             s.append(eol);
             if (ct.isSentEnd()) s.append(eol);
             writer.write(s.toString());
@@ -249,6 +262,7 @@ public class MmaxWrapper {
 			if (args[i].equalsIgnoreCase("-ner")) forNer = Utils.attr("true", "-ner");
 			if (args[i].equalsIgnoreCase("-importWebNE")) importWebNe = Utils.attr(args[i+1], "-importWebNE");
 			if (args[i].equalsIgnoreCase("-conllNeColumn")) conllNeColumn = Integer.parseInt(Utils.attr(args[i+1], "-conllNeColumn"));
+			if (args[i].equalsIgnoreCase("-exportCategories")) exportCategories = Utils.attr(args[i+1], "-exportCategories");
 			
 			if (args[i].equalsIgnoreCase("-h") || args[i].equalsIgnoreCase("--help") || args[i].equalsIgnoreCase("-?")) {
 				System.out.println("MMAX2 wrapper");
