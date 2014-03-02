@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.io.OutputStreamWriter;
 import java.util.Arrays;
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.Set;
 
 import javax.xml.parsers.DocumentBuilder;
@@ -26,9 +27,11 @@ public class MmaxWrapper {
 	static String mmaxPath = "";
 	static String project = "";
 	static String forNer = "";
+	static String forCoref = "";
 	static String importWebNe = "";
 	static int conllNeColumn = -1;
 	static String exportCategories = "";
+	static boolean compact = false;
 	
 	
 	static String MMAX_STRING = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n" +
@@ -190,6 +193,137 @@ public class MmaxWrapper {
     	writer.close();
     }
     
+    public void exportForCoref(Conll conll, String fileName) throws IOException {
+    	Set<String> categories = new HashSet<String>();
+    	String[] categoriesArr = exportCategories.split(",");
+    	boolean match = false;
+    	if (categoriesArr.length > 0) match = true;
+    	categories.addAll(Arrays.asList(categoriesArr));
+    	
+    	BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(fileName),"UTF-8"));
+    	String eol = System.getProperty("line.separator");        
+        for (int token_i = 0; token_i < conll.getSize(); token_i++) {
+        	StringBuilder s = new StringBuilder();
+        	StringBuilder nf = new StringBuilder(); // ner features
+        	ConllToken ct = conll.getToken(token_i);
+        	s.append(ct.position); s.append("\t");
+            s.append(ct.word.replace(" ",  "_")); s.append("\t");
+            s.append(ct.lemma.replace(" ",  "_")); s.append("\t");
+            if (ct.tag.trim().length() > 0) s.append(ct.tag); else s.append(ct.fullTag); s.append("\t"); // empty small tag fix
+            s.append(ct.fullTag); s.append("\t");
+            s.append(compact ? "_" : ct.morphoFeatures); s.append("\t");            
+            
+            if (ct.syntax == null) s.append("_"); else s.append(ct.syntax); s.append("\t");
+            
+            if (!match || categories.contains(ct.category)) {
+            	s.append(ct.category); s.append("\t");
+            } else {
+            	s.append("O\t");
+            }
+            
+            s.append(ct.dep == null ? "_" : ct.dep); s.append("\t");
+            
+            // mention id
+            boolean start = true;
+        	Iterator<Markable> ims = ct.mentionStart.iterator();
+        	while(ims.hasNext()) {
+        		Markable m = ims.next();
+        		if (!start) s.append("|");
+        		s.append("("); s.append(m.corefID);
+        		start = false;
+        	}
+        	Iterator<Markable> ime = ct.mentionEnd.iterator();
+        	while(ime.hasNext()) {
+        		Markable m = ime.next();
+        		if (ct.mentionStart.contains(m)) {
+        			s.append(")");
+        		} else {
+        			if (!start) s.append("|");
+        			s.append(m.corefID); s.append(")");
+        		}
+        		start = false;
+        	}
+        	if (start) s.append("_");
+        	s.append("\t"); 
+        	
+        	// mention category
+        	start = true;
+        	ims = ct.mentionStart.iterator();
+        	while(ims.hasNext()) {
+        		Markable m = ims.next();
+        		if (!start) s.append("|");
+        		s.append("("); s.append(m.category);
+        		start = false;
+        	}
+        	ime = ct.mentionEnd.iterator();
+        	while(ime.hasNext()) {
+        		Markable m = ime.next();
+        		if (ct.mentionStart.contains(m)) {
+        			s.append(")");
+        		} else {
+        			if (!start) s.append("|");
+        			s.append(m.category); s.append(")");
+        		}
+        		start = false;
+        	}
+        	if (start) s.append("_");
+        	s.append("\t"); 
+
+        	// mention type
+        	start = true;
+        	ims = ct.mentionStart.iterator();
+        	while(ims.hasNext()) {
+        		Markable m = ims.next();
+        		if (!start) s.append("|");
+        		s.append("("); s.append(m.type);
+        		start = false;
+        	}
+        	ime = ct.mentionEnd.iterator();
+        	while(ime.hasNext()) {
+        		Markable m = ime.next();
+        		if (ct.mentionStart.contains(m)) {
+        			s.append(")");
+        		} else {
+        			if (!start) s.append("|");
+        			s.append(m.type); s.append(")");
+        		}
+        		start = false;
+        	}
+        	if (start) s.append("_");
+        	s.append("\t"); 
+        	
+        	// rule
+        	start = true;
+        	ims = ct.mentionStart.iterator();
+        	while(ims.hasNext()) {
+        		Markable m = ims.next();
+        		if (!start) s.append("|");
+        		s.append("("); s.append(m.rule);
+        		start = false;
+        	}
+        	ime = ct.mentionEnd.iterator();
+        	while(ime.hasNext()) {
+        		Markable m = ime.next();
+        		if (ct.mentionStart.contains(m)) {
+        			s.append(")");
+        		} else {
+        			if (!start) s.append("|");
+        			s.append(m.rule); s.append(")");
+        		}
+        		start = false;
+        	}
+        	if (start) s.append("_");
+        	
+        	
+            
+            s.append(eol);
+            if (ct.isSentEnd()) s.append(eol);
+            writer.write(s.toString());
+    	}
+    	writer.flush();
+    	writer.close();
+    }
+    
     
     public void readWordLevel(Conll conll, String fileName) throws SAXException, IOException, ParserConfigurationException {
     	File mmax_file = new File(fileName);
@@ -238,7 +372,11 @@ public class MmaxWrapper {
         	org.w3c.dom.Node markable = markables.item(i);   
         	String span = markable.getAttributes().getNamedItem("span").getNodeValue();
         	String category = markable.getAttributes().getNamedItem("category").getNodeValue();
-        	
+        	String type = markable.getAttributes().getNamedItem("type").getNodeValue();
+        	String rule = markable.getAttributes().getNamedItem("rule").getNodeValue();
+        	String corefString = markable.getAttributes().getNamedItem("coref_class").getNodeValue();
+        	Integer id = -1;
+        	if (corefString.startsWith("set_")) id = Integer.parseInt(corefString.substring(4));
         	String[] intervals = span.split(",");
             String[] interval = intervals[0].split("\\.\\.");
             int start = Integer.parseInt(interval[0].substring(5)) - 1 ;
@@ -247,8 +385,10 @@ public class MmaxWrapper {
                 end = Integer.parseInt(interval[1].substring(5)) - 1;
             }
             
-            conll.setMention(start, end, category);
-        }
+            conll.setEntity(start, end, category);
+            conll.setMention(start, end, id, category, type, rule);
+        }        
+        conll.sortMarkables();
     }
     
 	
@@ -263,6 +403,8 @@ public class MmaxWrapper {
 			if (args[i].equalsIgnoreCase("-importWebNE")) importWebNe = Utils.attr(args[i+1], "-importWebNE");
 			if (args[i].equalsIgnoreCase("-conllNeColumn")) conllNeColumn = Integer.parseInt(Utils.attr(args[i+1], "-conllNeColumn"));
 			if (args[i].equalsIgnoreCase("-exportCategories")) exportCategories = Utils.attr(args[i+1], "-exportCategories");
+			if (args[i].equalsIgnoreCase("-coref")) forCoref = Utils.attr("true",  "-coref");
+			if (args[i].equalsIgnoreCase("-compact")) { compact = true;  Utils.attr("true",  "-compact"); }
 			
 			if (args[i].equalsIgnoreCase("-h") || args[i].equalsIgnoreCase("--help") || args[i].equalsIgnoreCase("-?")) {
 				System.out.println("MMAX2 wrapper");
@@ -272,6 +414,7 @@ public class MmaxWrapper {
 				System.out.println("\n\t-mmaxPath : path to mmax project");
 				System.out.println("\n\t-project : project name");
 				System.out.println("\n\t-ner : flag wheter to use function exportForNer()");
+				System.out.println("\n\t-coref : flag wheter to use function exportForCoref() - LVCoref training format");
 				System.out.println("\n\t-conllNeColumn : set NE annotation from conll column with specified index (numbering starts with 0)");
 				System.out.flush();
 				System.exit(0);
@@ -294,6 +437,8 @@ public class MmaxWrapper {
 	        mw.addMarkableLevel(conll, coref_level);
 	        if (forNer.length() > 0) {
 	        	mw.exportForNer(conll, exportConll);	        	
+	        } else if (forCoref.length() > 0){
+	        	mw.exportForCoref(conll, exportConll);
 	        } else {
 	        	mw.exportTokens(conll, exportConll);
 	        }

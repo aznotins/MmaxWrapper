@@ -4,17 +4,15 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 import java.util.Locale.Category;
 
 
 class Conll {
-	private List<ConllToken> document;
-	
-	Conll() {
-		document = new ArrayList<ConllToken>();
-	}
-	
+	private List<ConllToken> document = new ArrayList<ConllToken>();
+	private List<Markable> markables = new ArrayList<Markable>();
+
 	public int getSize() {
 		return document.size();
 	}
@@ -22,6 +20,8 @@ class Conll {
 	public ConllToken getToken(int index) {
 		return document.get(index);
 	}
+	
+	public List<Markable> getMarkables() { return markables; }
 	
     public void readConll(String fileName) throws NumberFormatException, IOException {
     	BufferedReader conll_in = new BufferedReader(new InputStreamReader(new FileInputStream(fileName), "UTF8"));
@@ -142,7 +142,7 @@ class Conll {
      * @param endIndex
      * @param category
      */
-    public void setMention(int startIndex, int endIndex, String category) {
+    public void setEntity(int startIndex, int endIndex, String category) {
     	if (!getToken(endIndex).defaultCategory()) return;
     	for (int i = startIndex; i <= endIndex; i++) {
     		ConllToken ct = getToken(i);
@@ -152,6 +152,24 @@ class Conll {
     	}
     	getToken(startIndex).cat_start = true;
     	getToken(endIndex).cat_end = true;
+    }
+    
+    public void setMention(int start, int end, Integer corefID, String category, String type, String rule) {
+    	Markable s = new Markable (start, end, corefID, category, type, rule);
+    	getToken(start).mentionStart.add(s);
+    	getToken(end).mentionEnd.add(s);
+    	markables.add(s);    	
+    }
+    
+    /**
+     * Sort markables if token contains more than one (longest to shortest)
+     * Ending markables sorted in reverse order
+     */
+    public void sortMarkables() {
+    	for (ConllToken ct : document) {
+    		Collections.sort(ct.mentionStart);
+    		Collections.sort(ct.mentionEnd, Collections.reverseOrder());
+    	}
     }
     
     

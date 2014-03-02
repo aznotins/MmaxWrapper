@@ -4,6 +4,7 @@ import java.util.List;
 
 
 public class ConllToken {
+	
 	Conll conll;  
     int sent_id;
     int id;
@@ -16,7 +17,8 @@ public class ConllToken {
     String tag;
     String fullTag;
     String morphoFeatures;
-    String syntax;
+    Integer syntax;
+    String dep;
     
     boolean sent_start;
     
@@ -25,6 +27,8 @@ public class ConllToken {
     boolean cat_start = false;
     boolean cat_end = false;
     
+    List<Markable> mentionStart = new ArrayList<Markable>();
+    List<Markable> mentionEnd = new ArrayList<Markable>();
     
     /**
      * 
@@ -43,7 +47,9 @@ public class ConllToken {
     	tag = _fields[3];
     	fullTag = _fields[4];
     	morphoFeatures = _fields[5];
+    	if (_fields.length > 6) syntax = Integer.parseInt(_fields[6]);
     	fields = new ArrayList(Arrays.asList(_fields));
+    	if (_fields.length > 8) dep = _fields[7]; // from maltparser
     }
     
     /**
